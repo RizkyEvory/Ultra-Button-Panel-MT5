@@ -473,6 +473,6 @@ M4DI_UciH4_Panel_v2_Fixed.mq5
 
 Jika project ini bermanfaat, kasih ⭐ di repo ini ya!
 
-**© 2024 M4DI~UciH4 — All Rights Reserved**
+**© 2026 M4DI~UciH4 — All Rights Reserved**
 
 </div>
