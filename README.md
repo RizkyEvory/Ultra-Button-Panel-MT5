@@ -1,478 +1,428 @@
 <div align="center">
 
-```
-███╗   ███╗██╗  ██╗██████╗ ██╗    ██╗   ██╗ ██████╗██╗██╗  ██╗██╗  ██╗
-████╗ ████║██║  ██║██╔══██╗██║    ██║   ██║██╔════╝██║██║  ██║██║  ██║
-██╔████╔██║███████║██║  ██║██║    ██║   ██║██║     ██║███████║███████║
-██║╚██╔╝██║╚════██║██║  ██║██║    ██║   ██║██║     ██║╚════██║╚════██║
-██║ ╚═╝ ██║     ██║██████╔╝██║    ╚██████╔╝╚██████╗██║     ██║     ██║
-╚═╝     ╚═╝     ╚═╝╚═════╝ ╚═╝     ╚═════╝  ╚═════╝╚═╝     ╚═╝     ╚═╝
-```
+# 🎯 M4DI~UciH4 ULTRA BUTTON PANEL v3.02
 
-# 🎯 Ultra Button Panel MT5
-### *Premium Semi-Manual Trading Panel for MetaTrader 5*
+### Premium Semi-Manual Trading Panel for MetaTrader 5
 
-[![Version](https://img.shields.io/badge/version-2.01-blueviolet?style=for-the-badge)](https://github.com/RizkyEvory)
-[![Platform](https://img.shields.io/badge/platform-MetaTrader%205-blue?style=for-the-badge)](https://www.metatrader5.com)
-[![Language](https://img.shields.io/badge/language-MQL5-orange?style=for-the-badge)](https://www.mql5.com)
-[![License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
-[![Author](https://img.shields.io/badge/author-M4DI~UciH4-purple?style=for-the-badge)](https://github.com/RizkyEvory)
+[![MQL5](https://img.shields.io/badge/MQL5-Expert%20Advisor-blue?style=for-the-badge&logo=metatrader5)](https://www.mql5.com/)
+[![Version](https://img.shields.io/badge/Version-3.02-green?style=for-the-badge)](https://github.com/RizkyEvory/M4DI-UciH4-Panel)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
+[![Platform](https://img.shields.io/badge/Platform-MT5-orange?style=for-the-badge)](https://www.metatrader5.com/)
 
-**One-Click Trading · Smart Risk Calculator · Multi-TP · Trailing Stop · Session Filter**
+<p align="center">
+  <img src="https://img.shields.io/badge/One--Click%20Trading-✓-brightgreen?style=flat-square" alt="One-Click Trading"/>
+  <img src="https://img.shields.io/badge/Pending%20Orders-✓-brightgreen?style=flat-square" alt="Pending Orders"/>
+  <img src="https://img.shields.io/badge/Martingale%20%2F%20Grid-✓-brightgreen?style=flat-square" alt="Martingale/Grid"/>
+  <img src="https://img.shields.io/badge/Auto%20Close-✓-brightgreen?style=flat-square" alt="Auto Close"/>
+  <img src="https://img.shields.io/badge/Multi--TP-✓-brightgreen?style=flat-square" alt="Multi-TP"/>
+</p>
 
-[📥 Download](#-installation) · [📖 Documentation](#-features) · [🐛 Report Bug](https://github.com/RizkyEvory/issues) · [💡 Request Feature](https://github.com/RizkyEvory/issues)
+---
+
+**Panel trading semi-manual all-in-one untuk MT5 dengan fitur lengkap:**  
+*One-Click Trading, Pending Orders, Martingale/Grid, Auto Close Profit/Loss,*  
+*Flip/Reverse Position, Multi-TP Partial Close, Trailing Stop, Break Even, dan banyak lagi!*
+
+[📥 Download](#-instalasi) • [📖 Dokumentasi](#-fitur-utama) • [🐛 Report Bug](https://github.com/RizkyEvory/M4DI-UciH4-Panel/issues) • [💡 Request Feature](https://github.com/RizkyEvory/M4DI-UciH4-Panel/issues)
 
 </div>
 
 ---
 
-## 📌 Table of Contents
-
-- [Overview](#-overview)
-- [Features](#-features)
-- [Panel Layout](#-panel-layout)
-- [Installation](#-installation)
-- [Configuration](#-configuration)
-- [Keyboard Shortcuts](#️-keyboard-shortcuts)
-- [Supported Markets](#-supported-markets)
-- [Risk Warning](#-risk-warning)
-- [Changelog](#-changelog)
-- [Author](#-author)
-
----
-
-## 🔭 Overview
-
-**M4DI~UciH4 Ultra Button Panel** adalah semi-manual trading panel premium untuk MetaTrader 5 yang dirancang untuk trader yang menginginkan eksekusi cepat, manajemen risiko yang akurat, dan kontrol penuh atas setiap trade — semua dari satu panel yang elegan di chart.
-
-Panel ini **bukan EA otomatis**. Semua keputusan trading tetap di tangan kamu. Panel hanya mempercepat dan menyederhanakan eksekusi order, manajemen posisi, dan monitoring.
-
-```
-┌─────────────────────────────────────┐
-│  Tanpa Panel          Dengan Panel  │
-│  ─────────────        ───────────── │
-│  Buka dialog order → Klik BUY/SELL  │
-│  Hitung lot manual → AUTO calculate │
-│  Set SL/TP manual  → Set sekali     │
-│  Monitor 3 TP      → Auto partial   │
-│  Close manual      → 1 tombol       │
-└─────────────────────────────────────┘
-```
-
----
-
-## ✨ Features
-
-### ⚡ One-Click Buy / Sell
-Eksekusi market order instan dengan satu klik. Harga **Ask** dan **Bid** ditampilkan realtime langsung di dalam tombol BUY dan SELL. Support konfirmasi dialog opsional untuk mencegah fat-finger.
-
-- ✅ Eksekusi instan tanpa dialog tambahan
-- ✅ Harga realtime di dalam tombol
-- ✅ Cooldown protection anti double-click (2 detik)
-- ✅ Auto-handle requote, off-quote, no connection
-- ✅ Optional confirmation dialog
-
----
-
-### 🧮 Smart Risk Calculator
-Kalkulasi lot size otomatis berdasarkan persentase risiko akun. Formula universal yang akurat untuk semua jenis instrumen.
-
-```
-Formula:
-Lot = Risk($) ÷ (SL_points × PointValue)
-
-Dimana:
-Risk($)     = AccountBalance × RiskPercent / 100
-PointValue  = (SL_points × _Point) / TickSize × TickValue
-```
-
-- ✅ Support Forex, Gold (XAUUSD), Indices (US30, NAS100), Crypto
-- ✅ Auto-detect digit count per symbol
-- ✅ Auto-round ke lot step minimum broker
-- ✅ Tampilkan risk amount dalam $ realtime
-- ✅ Update otomatis saat SL atau balance berubah
-
----
-
-### 🎯 Multi Take Profit (TP1 / TP2 / TP3)
-Tiga level take profit dengan partial close otomatis. Setiap TP bisa di-toggle aktif/nonaktif secara independen.
-
-| Level | Default Distance | Default Close % |
-|-------|-----------------|-----------------|
-| TP1   | 300 points      | 50% posisi      |
-| TP2   | 600 points      | 30% posisi      |
-| TP3   | 1000 points     | 20% posisi      |
-
-- ✅ Partial close otomatis saat harga menyentuh setiap TP
-- ✅ Auto geser SL ke Break Even setelah TP1 tercapai (opsional)
-- ✅ Garis TP ditampilkan di chart (dashed, warna gold)
-- ✅ TP Tracker rebuild otomatis saat EA restart
-- ✅ Setiap TP independen — bisa aktif/nonaktif per level
-
----
-
-### 🔄 Trailing Stop & Break Even
-
-**Break Even:**
-Geser SL ke harga entry + offset kecil dengan satu klik. Posisi terlindungi dari loss meskipun harga berbalik.
-
-**Trailing Stop:**
-SL otomatis mengikuti harga saat posisi profit. Aktifkan/nonaktifkan kapan saja dengan toggle button atau tekan `T`.
-
-```
-Trailing Logic:
-IF profit_points >= TrailingStart THEN
-   newSL = currentPrice - TrailingDistance
-   IF newSL > currentSL + TrailingStep THEN
-      ModifySL(newSL)
-```
-
-| Parameter        | Default | Keterangan                              |
-|------------------|---------|-----------------------------------------|
-| TrailingStart    | 200 pts | Mulai trailing setelah profit N points  |
-| TrailingStep     | 100 pts | Minimum pergerakan sebelum update SL    |
-| TrailingDistance | 150 pts | Jarak SL dari harga saat ini            |
-| BE_Offset        | 10 pts  | Offset SL dari entry saat Break Even    |
-
----
-
-### ✂️ Partial Close
-Tutup sebagian posisi dengan satu klik tanpa perlu buka dialog.
-
-- **25%** — Ambil profit kecil, biarkan sisanya jalan
-- **50%** — Tutup setengah posisi
-- **75%** — Tutup sebagian besar, sisakan sedikit
-
-Auto-handle jika hasil lot partial < minimum lot broker → tutup semua.
-
----
-
-### 🌐 Session Filter Visual
-Indicator visual tiga sesi trading utama dunia.
-
-| Session   | Jam (GMT)     | Karakteristik         |
-|-----------|---------------|-----------------------|
-| 🌏 Asia   | 00:00 – 09:00 | Low volatility, range |
-| 🌍 London | 08:00 – 17:00 | High volatility       |
-| 🌎 New York | 13:00 – 22:00 | Trend continuation   |
-
-- ✅ Highlight session aktif secara realtime
-- ✅ Overlap London-NY ditampilkan (kedua aktif)
-- ✅ Optional: block trading di luar session tertentu
-
----
-
-### 📊 Daily PnL Tracker
-Monitor performa trading harian secara realtime.
-
-- ✅ Daily Realized P&L ($)
-- ✅ Floating P&L (posisi terbuka)
-- ✅ Jumlah open trades & total lot
-- ✅ Win Rate harian (wins/total)
-- ✅ Reset otomatis setiap hari baru
-- ✅ Persistent via GlobalVariable (tidak hilang saat EA restart)
-- ✅ Update otomatis via `OnTradeTransaction()` saat SL/TP hit
-
----
-
-### 📡 Spread & Swap Monitor
-- ✅ Current spread dalam pips (realtime, update per tick)
-- ✅ Swap Long & Short value
-- ✅ Auto-block order jika spread melebihi threshold
-- ✅ Visual warning saat spread terlalu lebar
-
----
-
-### 🔧 Close Buttons
-| Tombol         | Fungsi                                          |
-|----------------|-------------------------------------------------|
-| CLOSE ALL      | Tutup semua posisi (magic number EA)            |
-| CLOSE BUY      | Tutup semua posisi Buy                          |
-| CLOSE SELL     | Tutup semua posisi Sell                         |
-| ✓ PROFIT       | Tutup semua posisi yang sedang floating profit  |
-| ✗ LOSS         | Tutup semua posisi yang sedang floating loss    |
-
----
-
-## 🖥️ Panel Layout
-
-```
-┌────────────────────────────────┐
-│  M4DI~UciH4                    │  ← Drag area (geser panel)
-│  ULTRA BUTTON PANEL • MT5      │
-│  github.com/RizkyEvory • v2.01 │
-├────────────────────────────────┤
-│  XAUUSD  Spread: 1.8  ⚠ WARN  │  ← Symbol info
-│  L: -2.40          S: -1.80   │
-├─────────────────┬──────────────┤
-│   ▲  BUY        │  ▼  SELL    │  ← One-click order
-│   2341.85       │  2341.67    │
-├────────────────────────────────┤
-│  Lot: [−] 0.10 [+]  [AUTO]   │  ← Lot & Risk
-│  SL:  [−] 500  [+]            │
-│  Risk: 1.0%   Risk: $12.50    │
-├────────────────────────────────┤
-│  ━━━━ TP LEVELS ━━━━           │  ← Multi-TP
-│  [☑ TP1]  300 pts | 50%       │
-│  [☑ TP2]  600 pts | 30%       │
-│  [☑ TP3] 1000 pts | 20%       │
-├────────────────────────────────┤
-│  ━━━ MANAGEMENT ━━━            │  ← BE & Trailing
-│  [BREAK EVEN]  [TRAIL: OFF]   │
-├────────────────────────────────┤
-│  ━━━ PARTIAL CLOSE ━━━         │  ← Partial close
-│  [  25%  ] [  50%  ] [  75%  ]│
-├────────────────────────────────┤
-│  [      CLOSE ALL            ] │  ← Close buttons
-│  [ CLOSE BUY ] [ CLOSE SELL ] │
-│  [  ✓ PROFIT ] [   ✗ LOSS   ] │
-├────────────────────────────────┤
-│  ━━━ SESSIONS ━━━              │  ← Session filter
-│  [ ASIA ] [LONDON] [ N.YORK ] │
-├────────────────────────────────┤
-│  ━━━ DAILY STATS ━━━           │  ← Daily tracker
-│  Daily P/L: +$47.30            │
-│  Floating:  +$12.50            │
-│  Open: 2 | Lots: 0.20          │
-│  Win Rate: 68% (15/22)         │
-├────────────────────────────────┤
-│  M4DI~UciH4 © Keys: B/S/Q/E/T │  ← Footer
-└────────────────────────────────┘
-```
-
----
-
-## 📥 Installation
-
-### Method 1 — Manual
-```
-1. Download file M4DI_UciH4_Panel_v2_Fixed.mq5
-2. Buka MetaTrader 5
-3. Klik menu: File → Open Data Folder
-4. Navigasi ke: MQL5 → Experts
-5. Copy file .mq5 ke folder tersebut
-6. Buka MetaEditor (F4 di MT5)
-7. Buka file → Compile (F7)
-8. Kembali ke MT5 → Navigator → Expert Advisors
-9. Drag ke chart yang diinginkan
-```
-
-### Method 2 — MetaEditor
-```
-1. Buka MetaEditor (F4)
-2. File → Open → pilih M4DI_UciH4_Panel_v2_Fixed.mq5
-3. Tekan F7 untuk compile
-4. Pastikan: 0 errors, 0 warnings
-5. Drag dari Navigator ke chart
-```
-
-### ⚠️ Pastikan
-- ✅ **AutoTrading** diaktifkan di MT5 (tombol hijau di toolbar)
-- ✅ **Allow algo trading** dicentang di properties EA
-- ✅ Chart tidak dalam mode offline
-
----
-
-## ⚙️ Configuration
-
-### 📌 Panel Settings
-
-| Parameter | Default | Keterangan |
-|-----------|---------|------------|
-| `InpPanelX` | 20 | Posisi horizontal panel |
-| `InpPanelY` | 50 | Posisi vertikal panel |
-| `InpPanelDraggable` | true | Panel bisa di-drag dengan mouse |
-| `InpPanelCorner` | TOP_LEFT | Anchor corner panel |
-
-### 💰 Money Management
-
-| Parameter | Default | Keterangan |
-|-----------|---------|------------|
-| `InpDefaultLot` | 0.01 | Lot awal saat panel dibuka |
-| `InpRiskPercent` | 1.0% | Risk per trade dari balance |
-| `InpDefaultSL` | 500 pts | Stop loss default |
-| `InpMaxSpread` | 30 pts | Spread maksimal untuk trading |
-| `InpSlippage` | 30 pts | Toleransi slippage eksekusi |
-| `InpMagicNumber` | 20240301 | Identifikasi order EA |
-
-### 🎯 TP Levels
-
-| Parameter | Default | Keterangan |
-|-----------|---------|------------|
-| `InpTP1_Enabled` | true | Aktifkan TP1 |
-| `InpTP1_Points` | 300 pts | Jarak TP1 dari entry |
-| `InpTP1_Percent` | 50% | Persentase close di TP1 |
-| `InpTP2_Enabled` | true | Aktifkan TP2 |
-| `InpTP2_Points` | 600 pts | Jarak TP2 dari entry |
-| `InpTP2_Percent` | 30% | Persentase close di TP2 |
-| `InpTP3_Enabled` | true | Aktifkan TP3 |
-| `InpTP3_Points` | 1000 pts | Jarak TP3 dari entry |
-| `InpTP3_Percent` | 20% | Persentase close di TP3 |
-| `InpMoveSLToBE_OnTP1` | true | Auto BE setelah TP1 hit |
-
-### 🔄 Break Even & Trailing
-
-| Parameter | Default | Keterangan |
-|-----------|---------|------------|
-| `InpBE_Offset` | 10 pts | Offset SL dari entry saat BE |
-| `InpTrailingStart` | 200 pts | Profit minimum sebelum trailing aktif |
-| `InpTrailingStep` | 100 pts | Minimum pergerakan harga untuk update SL |
-| `InpTrailingDistance` | 150 pts | Jarak SL dari harga saat trailing |
-
-### ⏰ Session Settings
-
-| Parameter | Default | Keterangan |
-|-----------|---------|------------|
-| `InpGMT_Offset` | 3 | GMT offset server broker |
-| `InpBlockOutsideSession` | false | Block order di luar session |
-| `InpShowSessionFilter` | true | Tampilkan session indicator |
-
-> **💡 Tip:** Cek GMT offset broker kamu di: Terminal → Market Watch → klik kanan → Symbols → Properties. Sesuaikan `InpGMT_Offset` agar session indicator akurat.
-
-### 📊 Display Options
-
-| Parameter | Default | Keterangan |
-|-----------|---------|------------|
-| `InpShowDailyStats` | true | Tampilkan daily statistics |
-| `InpShowChartLines` | true | Tampilkan SL/TP lines di chart |
-| `InpShowSpreadWarning` | true | Tampilkan warning spread tinggi |
-| `InpEnableSounds` | true | Aktifkan sound alerts |
-| `InpConfirmTrades` | false | Konfirmasi sebelum eksekusi order |
-
----
-
-## ⌨️ Keyboard Shortcuts
-
-| Key | Action |
-|-----|--------|
-| `B` | Execute BUY order |
-| `S` | Execute SELL order |
-| `Q` | Close ALL positions |
-| `E` | Apply Break Even ke semua posisi |
-| `T` | Toggle Trailing Stop ON/OFF |
-
-> **💡 Tip:** Pastikan fokus ada di chart window sebelum menggunakan keyboard shortcuts.
-
----
-
-## 📈 Supported Markets
-
-Panel ini kompatibel dengan semua instrumen di MT5 berkat formula risk calculator universal:
-
-| Market | Contoh | Kompatibilitas |
-|--------|--------|----------------|
-| Forex Major | EURUSD, GBPUSD, USDJPY | ✅ Full |
-| Forex Minor | EURGBP, AUDCAD, NZDCHF | ✅ Full |
-| Forex Exotic | USDMXN, USDZAR | ✅ Full |
-| Gold | XAUUSD | ✅ Full |
-| Silver | XAGUSD | ✅ Full |
-| Indices | US30, NAS100, SPX500 | ✅ Full |
-| Crypto | BTCUSD, ETHUSD | ✅ Full |
-| Energi | USOIL, UKOIL | ✅ Full |
-
----
-
-## 🏗️ Technical Architecture
-
-```
-M4DI_UciH4_Panel_v2_Fixed.mq5
-│
-├── OnInit()              — Inisialisasi, build panel, load stats
-├── OnDeinit()            — Cleanup objects, save stats
-├── OnTick()              — Update harga, trailing, TP check
-├── OnTimer()             — Refresh panel, session update (200ms)
-├── OnChartEvent()        — Button clicks, drag, keyboard
-├── OnTradeTransaction()  — Auto-update stats saat SL/TP hit
-│
-├── TRADING CORE
-│   ├── ExecuteBuy/Sell()      — Order execution
-│   ├── CanTrade()             — Pre-trade validation
-│   ├── NormalizeLot()         — Lot normalization
-│   ├── AutoCalculateLot()     — Risk-based lot calculator
-│   ├── ProcessTrailing()      — Trailing stop logic
-│   ├── CheckTPLevels()        — Multi-TP monitoring
-│   └── GetFillingMode()       — Auto broker filling mode
-│
-├── PANEL UI
-│   ├── CreatePanel()          — Build all UI objects
-│   ├── RefreshPanel()         — Update all displays
-│   ├── MoveAllObjects()       — Efficient drag (delta move)
-│   └── Create*/Update*()      — Individual component handlers
-│
-└── DATA & STATS
-    ├── LoadDailyStats()       — Load dari GlobalVariable
-    ├── SaveDailyStats()       — Save ke GlobalVariable
-    ├── RebuildTPTracker()     — Restore tracker setelah restart
-    └── CheckNewDay()          — Auto-reset stats harian
-```
-
-**Dependencies (MT5 Standard Library):**
-```cpp
-#include <Trade\Trade.mqh>         // CTrade — order execution
-#include <Trade\PositionInfo.mqh>  // CPositionInfo — position monitoring
-#include <Trade\SymbolInfo.mqh>    // CSymbolInfo — symbol data
-#include <Trade\AccountInfo.mqh>   // CAccountInfo — account data
-#include <Trade\DealInfo.mqh>      // CDealInfo — deal history
-```
-
----
-
-## ⚠️ Risk Warning
-
-> **PERINGATAN PENTING**
->
-> Trading forex, emas, indices, dan cryptocurrency mengandung **risiko kerugian yang sangat tinggi** dan tidak cocok untuk semua investor. Nilai investasi dapat turun maupun naik. Anda mungkin kehilangan sebagian atau seluruh modal yang diinvestasikan.
->
-> - Past performance **tidak menjamin** hasil di masa depan
-> - Gunakan panel ini hanya jika kamu memahami risiko trading
-> - Selalu test di **demo account** sebelum live trading
-> - Atur risk per trade sesuai kemampuan keuangan kamu
-> - Developer **tidak bertanggung jawab** atas kerugian trading
-
----
-
-## 📋 Changelog
-
-### v2.01 — Bug Fix Release
-- 🔴 **FIX:** Hapus `Sleep()` dari `OnChartEvent()` — mencegah thread blocking
-- 🔴 **FIX:** Drag panel pakai delta movement — tidak lag saat drag
-- 🔴 **FIX:** TP2/TP3 tidak bergantung mutlak pada TP sebelumnya
-- 🔴 **FIX:** `NormalizeLot()` menggunakan dynamic decimal precision
-- 🔴 **FIX:** Risk calculator formula universal (Forex, Gold, Indices, Crypto)
-- 🟡 **FIX:** Spread check tidak bergantung `InpShowSpreadWarning`
-- 🟡 **FIX:** `RebuildTPTracker()` — restore TP tracker setelah EA restart
-- 🟡 **FIX:** Cooldown 2 detik anti double-click order
-- 🟡 **ADD:** `OnTradeTransaction()` — auto-update daily stats saat SL/TP hit
-
-### v2.00 — Major Release
-- ✨ One-Click Buy/Sell dengan harga realtime di tombol
-- ✨ Smart Risk Calculator universal
-- ✨ Multi-TP Levels (TP1/TP2/TP3) dengan partial auto-close
-- ✨ Trailing Stop & Break Even
-- ✨ Partial Close 25/50/75%
-- ✨ Session Filter Visual (Asia/London/NY)
-- ✨ Daily PnL Tracker dengan GlobalVariable persistence
-- ✨ Spread & Swap Monitor
-- ✨ Keyboard Shortcuts B/S/Q/E/T
-- ✨ Chart lines SL/TP/BE/Entry per posisi
-- ✨ GetFillingMode() auto-detect FOK/IOC/RETURN
-
----
-
-## 👤 Author
+## 📸 Screenshot
 
 <div align="center">
 
-**M4DI~UciH4**
+| Panel Utama | Trading View |
+|:-----------:|:------------:|
+| ![Panel](screenshots/panel-main.png) | ![Trading](screenshots/trading-view.png) |
 
-[![GitHub](https://img.shields.io/badge/GitHub-RizkyEvory-181717?style=for-the-badge&logo=github)](https://github.com/RizkyEvory)
+</div>
 
-*"Trade smart. Manage risk. Stay consistent."*
+> 📌 *Screenshot akan ditambahkan setelah testing*
 
 ---
 
-Jika project ini bermanfaat, kasih ⭐ di repo ini ya!
+## ✨ Fitur Utama
 
-**© 2026 M4DI~UciH4 — All Rights Reserved**
+### 🎯 One-Click Trading
+- Tombol **BUY** dan **SELL** dengan tampilan harga real-time
+- Spread indicator dengan warning jika spread tinggi
+- Session filter (Asia, London, New York)
+
+### 📋 Pending Orders
+- **Buy Limit** - Pasang order beli di bawah harga saat ini
+- **Buy Stop** - Pasang order beli di atas harga saat ini (breakout)
+- **Sell Limit** - Pasang order jual di atas harga saat ini
+- **Sell Stop** - Pasang order jual di bawah harga saat ini (breakout)
+- Adjustable distance dari harga saat ini
+- Cancel all pending dengan satu klik
+
+### 🔢 Martingale & Grid Mode
+| Mode | Deskripsi |
+|------|-----------|
+| **Martingale** | Lot otomatis dikali setiap posisi baru (Lot Multiplier) |
+| **Grid** | Buka posisi baru setiap X points melawan arah (Grid Step) |
+
+### 💵 Auto Close
+- **Auto Close Profit** - Tutup semua posisi saat floating profit mencapai target ($)
+- **Auto Close Loss** - Tutup semua posisi saat floating loss mencapai batas ($)
+
+### 🔄 Flip / Reverse Position
+- Tutup semua posisi dan langsung buka posisi **berlawanan**
+- Lot posisi baru = total lot posisi dominan sebelumnya
+- Hotkey: **F**
+
+### 🎯 Multi-TP (Partial Close)
+| Level | Default Distance | Default Close % |
+|-------|------------------|-----------------|
+| TP1 | 300 points | 50% |
+| TP2 | 600 points | 30% |
+| TP3 | 1000 points | 20% |
+
+- Opsi pindahkan SL ke Break Even setelah TP1 hit
+
+### 🔒 Break Even & Trailing Stop
+- **Manual Break Even** - Klik tombol untuk pindahkan SL ke entry + offset
+- **Auto Break Even** - Otomatis aktif saat profit mencapai X points
+- **Auto Trailing** - Trailing stop otomatis mengikuti harga
+- Configurable: Start, Step, dan Distance
+
+### 📊 Daily Statistics
+- Real-time floating P/L
+- Daily realized P/L
+- Win rate percentage
+- Total trades & lots
+
+### ⌨️ Hotkeys
+| Key | Fungsi |
+|-----|--------|
+| **B** | Buy |
+| **S** | Sell |
+| **Q** | Close All Positions |
+| **E** | Break Even |
+| **T** | Toggle Trailing |
+| **F** | Flip/Reverse Position |
+| **G** | Toggle Grid Mode |
+
+---
+
+## 📥 Instalasi
+
+### Metode 1: Manual Installation
+
+1. **Download** file `M4DI_UciH4_Panel_v3.mq5`
+
+2. **Buka** MetaTrader 5
+
+3. **Copy** file ke folder Experts:
+   ```
+   File → Open Data Folder → MQL5 → Experts
+   ```
+
+4. **Compile** file:
+   - Buka MetaEditor (F4)
+   - Buka file `M4DI_UciH4_Panel_v3.mq5`
+   - Tekan **F7** atau klik Compile
+
+5. **Attach** ke chart:
+   - Kembali ke MT5
+   - Navigator → Expert Advisors → M4DI_UciH4_Panel_v3
+   - Drag & drop ke chart
+
+6. **Enable** Auto Trading:
+   - Pastikan tombol "Algo Trading" di toolbar aktif (hijau)
+   - Di properties EA, centang "Allow Algo Trading"
+
+### Metode 2: Clone Repository
+
+```bash
+git clone https://github.com/RizkyEvory/M4DI-UciH4-Panel.git
+```
+
+Lalu copy folder ke `MQL5/Experts/`
+
+---
+
+## ⚙️ Parameter Settings
+
+### 📌 Panel Settings
+| Parameter | Default | Deskripsi |
+|-----------|---------|-----------|
+| `InpPanelX` | 20 | Posisi X panel |
+| `InpPanelY` | 50 | Posisi Y panel |
+| `InpPanelDraggable` | true | Panel bisa di-drag |
+| `InpPanelCorner` | CORNER_LEFT_UPPER | Posisi corner panel |
+
+### 💰 Money Management
+| Parameter | Default | Deskripsi |
+|-----------|---------|-----------|
+| `InpDefaultLot` | 0.01 | Lot size default |
+| `InpRiskPercent` | 1.0 | Risk per trade (%) |
+| `InpDefaultSL` | 500 | Stop Loss default (points) |
+| `InpMaxSpread` | 30 | Max spread allowed (points) |
+| `InpSlippage` | 30 | Slippage tolerance (points) |
+| `InpOrderCooldown` | 0 | Cooldown antar order (detik) |
+| `InpMagicNumber` | 20240301 | Magic number EA |
+
+### 📋 Pending Order
+| Parameter | Default | Deskripsi |
+|-----------|---------|-----------|
+| `InpPendingDistance` | 200 | Jarak pending dari harga (points) |
+| `InpPendingExpiry` | 0 | Expiry pending order (jam, 0=GTC) |
+
+### 🔢 Martingale / Grid
+| Parameter | Default | Deskripsi |
+|-----------|---------|-----------|
+| `InpMartingaleEnabled` | false | Enable Martingale Mode |
+| `InpLotMultiplier` | 2.0 | Lot multiplier untuk Martingale |
+| `InpMaxMartingaleLot` | 1.0 | Max lot untuk Martingale (safety) |
+| `InpGridEnabled` | false | Enable Grid Mode |
+| `InpGridStep` | 200 | Grid step (points) |
+| `InpGridMaxLevels` | 5 | Max grid levels |
+| `InpGridLotMultiplier` | 1.0 | Grid lot multiplier (1=fixed) |
+
+### 💵 Auto Close
+| Parameter | Default | Deskripsi |
+|-----------|---------|-----------|
+| `InpAutoCloseProfitOn` | false | Enable auto close by profit |
+| `InpAutoCloseProfit` | 10.0 | Target floating profit ($) |
+| `InpAutoCloseLossOn` | false | Enable auto close by loss |
+| `InpAutoCloseLoss` | 20.0 | Max floating loss ($) |
+
+### 🎯 TP Levels
+| Parameter | Default | Deskripsi |
+|-----------|---------|-----------|
+| `InpTP1_Enabled` | true | Enable TP1 |
+| `InpTP1_Points` | 300 | TP1 distance (points) |
+| `InpTP1_Percent` | 50 | TP1 close percent |
+| `InpTP2_Enabled` | true | Enable TP2 |
+| `InpTP2_Points` | 600 | TP2 distance (points) |
+| `InpTP2_Percent` | 30 | TP2 close percent |
+| `InpTP3_Enabled` | true | Enable TP3 |
+| `InpTP3_Points` | 1000 | TP3 distance (points) |
+| `InpTP3_Percent` | 20 | TP3 close percent |
+| `InpMoveSLToBE_OnTP1` | true | Move SL to BE after TP1 |
+
+### 🔄 Break Even & Trailing
+| Parameter | Default | Deskripsi |
+|-----------|---------|-----------|
+| `InpBE_Offset` | 10 | Break Even offset (points) |
+| `InpAutoBreakEven` | true | Auto Break Even |
+| `InpAutoBE_Points` | 200 | Auto BE aktif saat profit >= X points |
+| `InpAutoTrailing` | true | Auto Trailing Stop |
+| `InpTrailingStart` | 200 | Trailing mulai saat profit >= X points |
+| `InpTrailingStep` | 100 | Trailing step (points) |
+| `InpTrailingDistance` | 150 | Trailing distance dari harga (points) |
+
+### ⏰ Session Settings
+| Parameter | Default | Deskripsi |
+|-----------|---------|-----------|
+| `InpGMT_Offset` | 3 | Broker GMT Offset |
+| `InpBlockOutsideSession` | false | Block trading di luar session |
+| `InpShowSessionFilter` | true | Tampilkan session indicator |
+
+### 📊 Display Options
+| Parameter | Default | Deskripsi |
+|-----------|---------|-----------|
+| `InpShowDailyStats` | true | Tampilkan statistik harian |
+| `InpShowChartLines` | true | Tampilkan garis SL/TP di chart |
+| `InpShowSpreadWarning` | true | Tampilkan warning spread tinggi |
+| `InpEnableSounds` | true | Enable sound alerts |
+| `InpConfirmTrades` | false | Konfirmasi sebelum trading |
+
+---
+
+## 📖 Cara Penggunaan
+
+### Basic Trading
+
+1. **Set Lot Size** - Gunakan tombol **+/-** atau klik **AUTO** untuk hitung lot berdasarkan risk%
+
+2. **Set Stop Loss** - Gunakan tombol **+/-** untuk atur SL dalam points
+
+3. **Klik BUY atau SELL** - Eksekusi order langsung
+
+### Pending Orders
+
+1. Atur **Distance** menggunakan tombol +/-
+2. Klik salah satu:
+   - **BUY LIMIT** - Order beli di bawah harga
+   - **BUY STOP** - Order beli di atas harga
+   - **SELL LIMIT** - Order jual di atas harga
+   - **SELL STOP** - Order jual di bawah harga
+
+### Menggunakan Grid/Martingale
+
+1. Klik **MARTIN** atau **GRID** untuk aktifkan
+2. Buka posisi pertama (BUY/SELL)
+3. Grid: EA akan otomatis buka posisi baru setiap GridStep points
+4. Martingale: Lot akan dikali setiap posisi baru
+
+### Flip Position
+
+1. Pastikan ada posisi terbuka
+2. Klik **🔄 FLIP** atau tekan **F**
+3. Semua posisi akan ditutup dan posisi berlawanan dibuka
+
+### Partial Close
+
+- Klik **25%**, **50%**, atau **75%** untuk tutup sebagian dari semua posisi
+
+---
+
+## 🔧 Troubleshooting
+
+### EA Tidak Bisa Trading
+
+1. ✅ Pastikan **Algo Trading** enabled (tombol hijau di toolbar)
+2. ✅ Cek tab **Experts** di terminal untuk error message
+3. ✅ Pastikan symbol bisa ditrade (market buka)
+4. ✅ Cek spread tidak melebihi `InpMaxSpread`
+
+### Pending Order Gagal
+
+1. ✅ Pastikan jarak dari harga memenuhi **minimum stop level** broker
+2. ✅ Increase `InpPendingDistance` jika perlu
+
+### Panel Tidak Muncul
+
+1. ✅ Cek apakah EA sudah ter-compile (tidak ada error)
+2. ✅ Restart MT5
+3. ✅ Re-attach EA ke chart
+
+### Partial Close Tidak Bekerja
+
+1. ✅ Pastikan lot yang akan di-close >= minimum lot broker
+2. ✅ Cek apakah posisi masih terbuka
+
+---
+
+## 📝 Changelog
+
+### v3.02 (Current) - Major Bugfix
+- ✅ Fix `ExecutePendingOrder` - Perbaikan signature OrderOpen()
+- ✅ Fix `ProcessGrid` - Tambah margin check sebelum open
+- ✅ Fix `OnFlipClick` - Tambah delay & anti-double flip
+- ✅ Fix `CheckTPLevels` - Race condition pada partial close
+- ✅ Fix `RebuildTPTracker` - Skip entry price 0
+- ✅ Fix `GetMartingaleLot` - Proteksi overflow
+- ✅ Tambah `CleanupOrphanedLines()` untuk bersihkan chart
+- ✅ Tambah `SyncTPTracker()` untuk sinkronisasi
+
+### v3.01 - Bugfix
+- Fix harga stale setelah FLIP
+- Fix g_lastGridPrice dari posisi terbaru
+- Fix SL/TP gunakan harga fresh
+- Tambah cooldown anti-spam auto close
+
+### v3.00 - Major Update
+- ✨ Pending Order (Limit & Stop)
+- ✨ Martingale Mode
+- ✨ Grid Mode
+- ✨ Auto Close Profit/Loss
+- ✨ Flip/Reverse Position
+- ✨ Hotkeys (F, G, P)
+
+### v2.00
+- ✨ Multi-TP Partial Close
+- ✨ Auto Trailing Stop
+- ✨ Auto Break Even
+- ✨ Daily Statistics
+
+### v1.00
+- 🎉 Initial Release
+- One-Click Trading
+- Basic Panel
+
+---
+
+## ⚠️ Disclaimer
+
+```
+PERINGATAN RISIKO TRADING
+
+Trading forex dan CFD melibatkan risiko tinggi dan mungkin tidak cocok untuk 
+semua investor. Tingkat leverage yang tinggi dapat bekerja melawan Anda 
+maupun untuk Anda.
+
+EA ini disediakan "SEBAGAIMANA ADANYA" tanpa jaminan apapun. Penulis TIDAK 
+bertanggung jawab atas kerugian finansial yang diakibatkan oleh penggunaan EA ini.
+
+- Selalu gunakan di akun DEMO terlebih dahulu
+- Pahami sepenuhnya cara kerja setiap fitur sebelum live trading
+- Gunakan money management yang proper
+- Jangan pernah trade dengan uang yang tidak sanggup Anda rugikan
+
+Dengan menggunakan EA ini, Anda menyetujui bahwa Anda memahami risiko yang 
+terlibat dan menanggung tanggung jawab penuh atas keputusan trading Anda.
+```
+
+---
+
+## 📄 License
+
+```
+MIT License
+
+Copyright (c) 2024 M4DI~UciH4 (RizkyEvory)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+---
+
+## 🤝 Contributing
+
+Kontribusi sangat diterima! Silakan:
+
+1. **Fork** repository ini
+2. **Create** branch fitur baru (`git checkout -b feature/AmazingFeature`)
+3. **Commit** perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. **Push** ke branch (`git push origin feature/AmazingFeature`)
+5. **Open** Pull Request
+
+---
+
+## 💖 Support
+
+Jika EA ini membantu trading Anda, pertimbangkan untuk:
+
+- ⭐ **Star** repository ini
+- 🐛 **Report** bugs yang ditemukan
+- 💡 **Suggest** fitur baru
+- 📢 **Share** ke trader lain
+
+---
+
+## 📬 Contact
+
+**M4DI~UciH4** - [@RizkyEvory](https://github.com/RizkyEvory)
+
+Project Link: [https://github.com/RizkyEvory/M4DI-UciH4-Panel](https://github.com/RizkyEvory/M4DI-UciH4-Panel)
+
+---
+
+<div align="center">
+
+### Made with ❤️ by M4DI~UciH4
+
+**Happy Trading! 📈💰**
 
 </div>
